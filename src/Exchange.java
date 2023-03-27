@@ -9,12 +9,13 @@ public class Exchange {
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
         System.out.println("환전 프로그램입니다.");
+        System.out.println("원하는 환전을 선택하세요.");
 
-        int x;
         while (true) {
             System.out.println();
             System.out.println("(1) 달러  (2) 엔화  (3) 유로  (0) 종료");
 
+            int x;
             do {
                 System.out.print("메뉴를 선택하세요>> ");
                 x = stdIn.nextInt();
