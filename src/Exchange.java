@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Exchange {
 
-    final static double usd = 1298.80;
-    final static double jpy = 9.94;
-    final static double euro = 1398.07;
+    final static double USD = 1298.80;
+    final static double JPY = 9.94;
+    final static double EUR = 1398.07;
 
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
@@ -31,13 +31,13 @@ public class Exchange {
 
             double result;
             if (x == 1) {
-                result = exchange(money, usd);
+                result = exchange(money, USD);
                 System.out.println(money + "원은 USD " + result + "입니다.");
             } else if (x == 2) {
-                result = exchange(money, jpy);
+                result = exchange(money, JPY);
                 System.out.println(money + "원은 JPY " + result + "입니다.");
             } else if (x == 3) {
-                result = exchange(money, euro);
+                result = exchange(money, EUR);
                 System.out.println(money + "원은 EUR " + result + "입니다.");
             }
         }
