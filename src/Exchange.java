@@ -6,7 +6,7 @@ public class Exchange {
     final static double USD = 1298.80;
     final static double JPY = 9.94;
     final static double EUR = 1398.07;
- 
+
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
         System.out.println("환전 프로그램입니다.");
@@ -23,7 +23,7 @@ public class Exchange {
             } while (x < 0 || x > 4);
 
             System.out.print("원화를 입력하세요(단위 원)>> ");
-            double money = stdIn.nextFloat();
+            double money = stdIn.nextDouble();
 
             double result;
             if (x == 1) {
