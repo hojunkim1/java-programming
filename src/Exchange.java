@@ -20,7 +20,7 @@ public class Exchange {
             do {
                 System.out.print("메뉴를 선택하세요>> ");
                 x = stdIn.nextInt();
-            } while (x < 0 || x > 4);
+            } while (x < 0 || x > 3);
 
             System.out.print("원화를 입력하세요(단위 원)>> ");
             double money = stdIn.nextDouble();
