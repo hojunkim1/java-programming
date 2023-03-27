@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Exchange {
@@ -5,7 +6,7 @@ public class Exchange {
     final static double USD = 1298.80;
     final static double JPY = 9.94;
     final static double EUR = 1398.07;
-
+ 
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
         System.out.println("환전 프로그램입니다.");
@@ -13,7 +14,7 @@ public class Exchange {
 
         while (true) {
             System.out.println();
-            System.out.println("(1) 달러  (2) 엔화  (3) 유로  (0) 종료");
+            System.out.println("(1) 달러  (2) 엔화  (3) 유로");
 
             int x;
             do {
@@ -21,12 +22,6 @@ public class Exchange {
                 x = stdIn.nextInt();
             } while (x < 0 || x > 4);
 
-            if (x == 0) {
-                System.out.println("프로그램을 종료합니다.");
-                break;
-            }
-
-            System.out.println();
             System.out.print("원화를 입력하세요(단위 원)>> ");
             double money = stdIn.nextFloat();
 
@@ -40,6 +35,15 @@ public class Exchange {
             } else if (x == 3) {
                 result = exchange(money, EUR);
                 System.out.println(money + "원은 EUR " + result + "입니다.");
+            }
+
+            System.out.println();
+            System.out.print("계속 진행하시곘습니까?(진행:아무키, 마침:no)>> ");
+            String str = stdIn.next();
+
+            if (Objects.equals(str, "no")) {
+                System.out.println("프로그램을 종료합니다.");
+                break;
             }
         }
     }
