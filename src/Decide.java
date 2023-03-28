@@ -8,7 +8,7 @@ public class Decide {
         do {
             System.out.print("2자리수 정수 입력(10~99)>>");
             num = stdIn.nextInt();
-        } while (num < 10 || num > 100);
+        } while (num < 10 || num >= 100);
 
         if (num % 11 == 0) {
             System.out.println("맞아");
