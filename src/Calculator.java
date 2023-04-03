@@ -10,6 +10,11 @@ public class Calculator {
             String op = stdIn.next();
             int b = stdIn.nextInt();
 
+            if (op.equals("/") && b == 0) {
+                System.out.println("0으로 나눌 수 없습니다.");
+                continue;
+            }
+
             int result = calculate(a, b, op);
             if (result != 0)
                 System.out.println(a + op + b + "의 계산 결과는 " + result);
