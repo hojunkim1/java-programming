@@ -1,12 +1,13 @@
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Calculator2 {
     public static void main(String[] args) throws IOException {
 
         File file = new File("test.txt");
-        Scanner reader = new Scanner(file);
+        Scanner reader = new Scanner(file, StandardCharsets.UTF_8);
 
         while (reader.hasNextLine()) {
 

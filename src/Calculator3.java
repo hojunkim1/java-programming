@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Calculator3 {
@@ -20,7 +21,7 @@ public class Calculator3 {
     static int readData(int[] a, int[] b, String[] op) throws IOException {
 
         File file = new File("test.txt");
-        Scanner reader = new Scanner(file);
+        Scanner reader = new Scanner(file, StandardCharsets.UTF_8);
 
         int i = 0;
         while (reader.hasNextLine()) {
