@@ -1,4 +1,3 @@
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Exchange {
@@ -41,7 +40,7 @@ public class Exchange {
             System.out.print("계속 진행하시곘습니까?(진행:아무키, 마침:no)>> ");
             String str = stdIn.next();
 
-            if (Objects.equals(str, "no")) {
+            if (str.equals("no")) {
                 System.out.println("프로그램을 종료합니다.");
                 break;
             }
