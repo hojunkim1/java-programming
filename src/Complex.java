@@ -11,7 +11,7 @@ public class Complex {
         System.out.println(RE + " + " + IM + "i");
     }
 
-    public Complex add(Complex operand) {
+    public Complex plus(Complex operand) {
         return new Complex(this.RE + operand.RE, this.IM + operand.IM);
     }
 
@@ -19,7 +19,7 @@ public class Complex {
         return new Complex(this.RE - operand.RE, this.IM - operand.IM);
     }
 
-    public Complex multiply(Complex operand) {
+    public Complex times(Complex operand) {
         double real = (this.RE * operand.RE) - (this.IM * operand.IM);
         double imaginary = (this.RE * operand.IM) + (this.IM * operand.RE);
         return new Complex(real, imaginary);
@@ -37,9 +37,14 @@ public class Complex {
         Complex c1 = new Complex(10, 20);
         Complex c2 = new Complex(-5, -30);
 
-        c1.add(c2).show();
-        c1.minus(c2).show();
-        c1.multiply(c2).show();
-        c1.divide(c2).show();
+        Complex c3 = c1.plus(c2);
+        Complex c4 = c2.minus(c3);
+        Complex c5 = c3.times(c4);
+        Complex c6 = c4.divide(c5);
+
+        c3.show();
+        c4.show();
+        c5.show();
+        c6.show();
     }
 }
