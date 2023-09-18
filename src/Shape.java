@@ -1,11 +1,11 @@
 interface Shape {
-    final double PI = 3.14;
+    double PI = 3.14;
 
     void draw();
 
     double getArea();
 
-    default public void redraw() {
+    default void redraw() {
         System.out.print("--- 다시 그립니다. ");
         draw();
     }
@@ -13,7 +13,7 @@ interface Shape {
 
 class Circle implements Shape {
 
-    private int radius;
+    private final int radius;
 
     public Circle(int radius) {
         this.radius = radius;
@@ -38,8 +38,8 @@ class Circle implements Shape {
 
 class Oval implements Shape {
 
-    private int a;
-    private int b;
+    private final int a;
+    private final int b;
 
     public Oval(int a, int b) {
         this.a = a;
@@ -59,8 +59,8 @@ class Oval implements Shape {
 
 class Rect implements Shape {
 
-    private int a;
-    private int b;
+    private final int a;
+    private final int b;
 
     public Rect(int a, int b) {
         this.a = a;

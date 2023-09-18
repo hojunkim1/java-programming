@@ -36,7 +36,6 @@ public class Rectangle2 {
         if (r.x <= this.x) return false;
         else if (r.y <= this.y) return false;
         else if (r.x + r.width >= this.x + this.width) return false;
-        else if (r.y + r.height >= this.y + this.height) return false;
-        else return true;
+        else return r.y + r.height < this.y + this.height;
     }
 }
