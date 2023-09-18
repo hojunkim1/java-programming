@@ -1,3 +1,5 @@
+package spring.hw9;
+
 import java.awt.*;
 
 public class AwtEx {

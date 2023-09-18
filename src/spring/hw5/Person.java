@@ -1,3 +1,5 @@
+package spring.hw5;
+
 public class Person {
     private int age;
 

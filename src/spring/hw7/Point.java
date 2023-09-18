@@ -1,3 +1,5 @@
+package spring.hw7;
+
 class Point {
     private int x, y;
 

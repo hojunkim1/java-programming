@@ -1,3 +1,6 @@
+package spring.hw3;
+
+import java.awt.*;
 import java.util.Scanner;
 
 public class Rectangle {

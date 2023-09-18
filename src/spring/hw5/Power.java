@@ -1,3 +1,5 @@
+package spring.hw5;
+
 public class Power {
     private final int kick;
     private final int punch;

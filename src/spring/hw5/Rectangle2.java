@@ -1,3 +1,5 @@
+package spring.hw5;
+
 public class Rectangle2 {
     private final int x;
     private final int y;

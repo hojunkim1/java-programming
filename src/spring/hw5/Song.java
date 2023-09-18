@@ -1,3 +1,5 @@
+package spring.hw5;
+
 public class Song {
     private final String title;
     private final String artist;

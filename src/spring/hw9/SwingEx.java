@@ -1,3 +1,5 @@
+package spring.hw9;
+
 import javax.swing.*;
 
 public class SwingEx {

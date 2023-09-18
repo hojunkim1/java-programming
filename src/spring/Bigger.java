@@ -1,3 +1,5 @@
+package spring;
+
 import java.util.Scanner;
 
 public class Bigger {

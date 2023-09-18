@@ -1,3 +1,5 @@
+package spring.hw5;
+
 public class TV {
     private final String company;
     private final int year;
@@ -15,6 +17,6 @@ public class TV {
     }
 
     public void show() {
-        System.out.println(company + "에서 만든 " + year + "년형 " + inch + "인치 TV");
+        System.out.println(company + "에서 만든 " + year + "년형 " + inch + "인치 spring.hw5.TV");
     }
 }

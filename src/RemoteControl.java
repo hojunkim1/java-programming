@@ -36,7 +36,7 @@ class Television implements RemoteControl {
             this.volume = RemoteControl.MIN_VOLUME;
         else
             this.volume = volume;
-        System.out.println("현재 TV 볼륨: " + this.volume);
+        System.out.println("현재 spring.hw5.TV 볼륨: " + this.volume);
     }
 }
 
