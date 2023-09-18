@@ -1,4 +1,3 @@
-
 class Point {
     private int x, y;
 
@@ -37,6 +36,17 @@ class ColorPoint extends Point {
         this(0, 0, "BLACK");
     }
 
+    public static void main(String[] args) {
+        ColorPoint zeroPoint = new ColorPoint();
+        System.out.println(zeroPoint.toString());
+
+        ColorPoint cp = new ColorPoint(10, 10);
+        cp.setXY(5, 5);
+        cp.setColor("RED");
+        String str = cp.toString();
+        System.out.println(str + "입니다.");
+    }
+
     public void setXY(int x, int y) {
         move(x, y);
     }
@@ -48,17 +58,6 @@ class ColorPoint extends Point {
     public String toString() {
         return color + "색의 (" + getX() + "," + getY() + ") 점";
     }
-
-    public static void main(String[] args) {
-        ColorPoint zeroPoint = new ColorPoint();
-        System.out.println(zeroPoint.toString());
-
-        ColorPoint cp = new ColorPoint(10, 10);
-        cp.setXY(5, 5);
-        cp.setColor("RED");
-        String str = cp.toString();
-        System.out.println(str + "입니다.");
-    }
 }
 
 class Point3D extends Point {
@@ -67,6 +66,21 @@ class Point3D extends Point {
     public Point3D(int x, int y, int z) {
         super(x, y);
         this.z = z;
+    }
+
+    public static void main(String[] args) {
+        Point3D p = new Point3D(1, 2, 3);
+        System.out.println(p.toString() + "입니다.");
+
+        p.moveUp();
+        System.out.println(p.toString() + "입니다.");
+
+        p.moveDown();
+        p.move(10, 10);
+        System.out.println(p.toString() + "입니다.");
+
+        p.move(100, 200, 300);
+        System.out.println(p.toString() + "입니다.");
     }
 
     public void moveUp() {
@@ -85,21 +99,6 @@ class Point3D extends Point {
     public String toString() {
         return "(" + getX() + "," + getY() + "," + z + ")의 점";
     }
-
-    public static void main(String[] args) {
-        Point3D p = new Point3D(1, 2, 3);
-        System.out.println(p.toString() + "입니다.");
-
-        p.moveUp();
-        System.out.println(p.toString() + "입니다.");
-
-        p.moveDown();
-        p.move(10, 10);
-        System.out.println(p.toString() + "입니다.");
-
-        p.move(100, 200, 300);
-        System.out.println(p.toString() + "입니다.");
-    }
 }
 
 class PositivePoint extends Point {
@@ -112,14 +111,6 @@ class PositivePoint extends Point {
         this(0, 0);
     }
 
-    public void move(int x, int y) {
-        if (x >= 0 && y >= 0) super.move(x, y);
-    }
-
-    public String toString() {
-        return "(" + getX() + "," + getY() + ")의 점";
-    }
-
     public static void main(String[] args) {
         PositivePoint p = new PositivePoint();
         p.move(10, 10);
@@ -130,5 +121,13 @@ class PositivePoint extends Point {
 
         PositivePoint p2 = new PositivePoint(-10, -10);
         System.out.println(p2.toString() + "입니다.");
+    }
+
+    public void move(int x, int y) {
+        if (x >= 0 && y >= 0) super.move(x, y);
+    }
+
+    public String toString() {
+        return "(" + getX() + "," + getY() + ")의 점";
     }
 }

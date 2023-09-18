@@ -11,6 +11,17 @@ public class Rectangle2 {
         this.height = height;
     }
 
+    public static void main(String[] args) {
+        Rectangle2 r = new Rectangle2(2, 2, 8, 7);
+        Rectangle2 s = new Rectangle2(5, 5, 6, 6);
+        Rectangle2 t = new Rectangle2(1, 1, 10, 10);
+
+        r.show();
+        System.out.println("s의 면적은 " + s.square());
+        if (t.contains(r)) System.out.println("t는 r을 포함합니다.");
+        if (t.contains(s)) System.out.println("t는 s를 포함합니다.");
+    }
+
     public int square() {
         return width * height;
     }
@@ -25,16 +36,5 @@ public class Rectangle2 {
         else if (r.x + r.width >= this.x + this.width) return false;
         else if (r.y + r.height >= this.y + this.height) return false;
         else return true;
-    }
-
-    public static void main(String[] args) {
-        Rectangle2 r = new Rectangle2(2, 2, 8, 7);
-        Rectangle2 s = new Rectangle2(5, 5, 6, 6);
-        Rectangle2 t = new Rectangle2(1, 1, 10, 10);
-
-        r.show();
-        System.out.println("s의 면적은 " + s.square());
-        if (t.contains(r)) System.out.println("t는 r을 포함합니다.");
-        if (t.contains(s)) System.out.println("t는 s를 포함합니다.");
     }
 }

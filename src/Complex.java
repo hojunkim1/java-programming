@@ -7,6 +7,21 @@ public class Complex {
         this.IM = IM;
     }
 
+    public static void main(String[] args) {
+        Complex c1 = new Complex(10, 20);
+        Complex c2 = new Complex(-5, -30);
+
+        Complex c3 = c1.plus(c2);
+        Complex c4 = c2.minus(c3);
+        Complex c5 = c3.times(c4);
+        Complex c6 = c4.divide(c5);
+
+        c3.show();
+        c4.show();
+        c5.show();
+        c6.show();
+    }
+
     public void show() {
         System.out.println(RE + " + " + IM + "i");
     }
@@ -31,20 +46,5 @@ public class Complex {
         double parent = (operand.RE * operand.RE) + (operand.IM * operand.IM);
         if (parent == 0) return new Complex(0, 0);
         return new Complex(real / parent, imaginary / parent);
-    }
-
-    public static void main(String[] args) {
-        Complex c1 = new Complex(10, 20);
-        Complex c2 = new Complex(-5, -30);
-
-        Complex c3 = c1.plus(c2);
-        Complex c4 = c2.minus(c3);
-        Complex c5 = c3.times(c4);
-        Complex c6 = c4.divide(c5);
-
-        c3.show();
-        c4.show();
-        c5.show();
-        c6.show();
     }
 }

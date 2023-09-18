@@ -11,10 +11,6 @@ public class Grade {
         this.english = english;
     }
 
-    public int average() {
-        return (math + science + english) / 3;
-    }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -26,5 +22,9 @@ public class Grade {
         System.out.println("평균은 " + me.average());
 
         scanner.close();
+    }
+
+    public int average() {
+        return (math + science + english) / 3;
     }
 }
