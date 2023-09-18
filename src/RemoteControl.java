@@ -2,15 +2,15 @@ import java.util.Scanner;
 
 public interface RemoteControl {
 
-    public int MAX_VOLUME = 10;
+    int MAX_VOLUME = 10;
 
-    public int MIN_VOLUME = 0;
+    int MIN_VOLUME = 0;
 
-    public void turnOn();
+    void turnOn();
 
-    public void turnOff();
+    void turnOff();
 
-    public void setVolume(int volume);
+    void setVolume(int volume);
 }
 
 
