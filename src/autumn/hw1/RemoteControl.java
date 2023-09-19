@@ -1,3 +1,5 @@
+package autumn.hw1;
+
 import java.util.Scanner;
 
 public interface RemoteControl {

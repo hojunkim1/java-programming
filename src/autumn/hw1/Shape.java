@@ -1,3 +1,5 @@
+package autumn.hw1;
+
 interface Shape {
     double PI = 3.14;
 

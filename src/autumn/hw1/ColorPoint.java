@@ -1,16 +1,18 @@
+package autumn.hw1;
+
 import java.awt.*;
 
-class ColorPoint2 extends Point {
+class ColorPoint extends Point {
 
     private String color;
 
-    public ColorPoint2(int x, int y, String color) {
+    public ColorPoint(int x, int y, String color) {
         super(x, y);
         this.color = color;
     }
 
     public static void main(String[] args) {
-        ColorPoint2 cp = new ColorPoint2(5, 5, "YELLOW");
+        ColorPoint cp = new ColorPoint(5, 5, "YELLOW");
         cp.setXY(10, 20);
         cp.setColor("RED");
         String str = cp.toString();
