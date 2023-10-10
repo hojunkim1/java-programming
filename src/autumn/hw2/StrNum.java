@@ -18,39 +18,6 @@ public class StrNum {
     }
 
     /**
-     * [val] 의 setter 로 [strData] 도 동시에 업데이트한다.
-     *
-     * @param val 10진수 정수 데이터
-     */
-    private void setVal(int val) {
-        this.val = val;
-        this.strData = convertToBase(this.val, form);
-    }
-
-    public StrNum add(StrNum strNum) {
-        setVal(this.val + strNum.val);
-        return this;
-    }
-
-    public StrNum subtract(StrNum strNum) {
-        setVal(this.val - strNum.val);
-        return this;
-    }
-
-    public StrNum multiply(StrNum strNum) {
-        setVal(this.val * strNum.val);
-        return this;
-    }
-
-    public StrNum divide(StrNum strNum) {
-        if (strNum.val != 0)
-            setVal(this.val / strNum.val);
-        else
-            System.err.println("0으로 나눌 수 없습니다.");
-        return this;
-    }
-
-    /**
      * 숫자 리터럴의 prefix 를 통해 진법 정보를 확인하는 메서드
      *
      * @param str 문자열로 표현된 숫자 리터럴
@@ -95,6 +62,39 @@ public class StrNum {
             case "Hexadecimal" -> "0x" + Integer.toHexString(value).toUpperCase();
             default -> throw new IllegalArgumentException("Invalid number format");
         };
+    }
+
+    /**
+     * [val] 의 setter 로 [strData] 도 동시에 업데이트한다.
+     *
+     * @param val 10진수 정수 데이터
+     */
+    private void setVal(int val) {
+        this.val = val;
+        this.strData = convertToBase(this.val, form);
+    }
+
+    public StrNum add(StrNum strNum) {
+        setVal(this.val + strNum.val);
+        return this;
+    }
+
+    public StrNum subtract(StrNum strNum) {
+        setVal(this.val - strNum.val);
+        return this;
+    }
+
+    public StrNum multiply(StrNum strNum) {
+        setVal(this.val * strNum.val);
+        return this;
+    }
+
+    public StrNum divide(StrNum strNum) {
+        if (strNum.val != 0)
+            setVal(this.val / strNum.val);
+        else
+            System.err.println("0으로 나눌 수 없습니다.");
+        return this;
     }
 
     @Override
