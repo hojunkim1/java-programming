@@ -1,5 +1,8 @@
 package autumn.hw3;
 
+import autumn.hw4.GenericMethods;
+
+import java.util.Comparator;
 import java.util.Iterator;
 
 public class GenericList<T> {
@@ -17,6 +20,10 @@ public class GenericList<T> {
 
     public T get(int index) {
         return items[index];
+    }
+
+    public void sort(Comparator<? super T> c) {
+        GenericMethods.genericSort(this.items, count, c);
     }
 
     public Iterator<T> iterator() {
