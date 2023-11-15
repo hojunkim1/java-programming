@@ -2,8 +2,8 @@ package autumn.hw4;
 
 import autumn.hw3.GenericList;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -11,8 +11,7 @@ public class StudentTest {
     public static void main(String[] args) {
         GenericList<Student> students = new GenericList<>(4);
 
-        try {
-            File file = new File("./student.txt");
+        try (FileReader file = new FileReader("./student.txt")) {
             Scanner stdIn = new Scanner(file);
 
             while (stdIn.hasNextLine()) {
@@ -26,7 +25,7 @@ public class StudentTest {
             }
 
             stdIn.close();
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
 
