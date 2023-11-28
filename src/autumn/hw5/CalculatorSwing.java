@@ -18,6 +18,10 @@ public class CalculatorSwing extends JFrame {
         setVisible(true);
     }
 
+    public static void main(String[] args) {
+        new CalculatorSwing();
+    }
+
     private JPanel inputPanel() {
         JPanel f = new JPanel();
         f.setBackground(Color.LIGHT_GRAY);
@@ -54,9 +58,5 @@ public class CalculatorSwing extends JFrame {
         f.add(new JLabel("계산 결과"));
         f.add(new JTextField("", 30));
         return f;
-    }
-
-    public static void main(String[] args) {
-        new CalculatorSwing();
     }
 }
