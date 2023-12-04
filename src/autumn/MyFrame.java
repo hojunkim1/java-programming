@@ -2,7 +2,6 @@ package autumn;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 
 public class MyFrame extends JFrame {
     public MyFrame() throws HeadlessException {
@@ -14,15 +13,8 @@ public class MyFrame extends JFrame {
         JButton button = new JButton("click");
         button.setBorderPainted(false);
         button.setOpaque(true);
-        button.addActionListener(new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Clicked!");
-                button.setBackground(Color.YELLOW);
-                button.setText("YEAH!");
-            }
-        });
 
+        // button.addActionListener();
         c.add(button);
 
         setSize(500, 500);
